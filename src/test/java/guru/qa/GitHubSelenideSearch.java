@@ -64,6 +64,8 @@ public class GitHubSelenideSearch {
     void dragNDropTest() {
         open("https://the-internet.herokuapp.com/drag_and_drop");
         $("#column-a").dragAndDropTo($("#column-b"));
+        $("#column-b").shouldHave(Condition.text("A"));
+
     }
 
 }
