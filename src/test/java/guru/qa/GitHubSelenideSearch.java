@@ -16,7 +16,7 @@ import static io.qameta.allure.Allure.step;
 
 public class GitHubSelenideSearch {
     @BeforeAll
-    static void TestConfiguration() {
+    static void testConfiguration() {
         SelenideLogger.addListener("allure", new AllureSelenide());
         Selenide.clearBrowserCookies();
         Configuration.browserSize = "1920x1080";
@@ -25,7 +25,7 @@ public class GitHubSelenideSearch {
     }
 
     @Test
-    void GitHubSelenideSearchTest() {
+    void gitHubSelenideSearchTest() {
         step("Откройте страницу Slenide в github", () -> {
             open("/selenide/selenide");
         });
